@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://gitlab.com/vtolvr-mods/ModLoader/-/raw/release/schema.json",
+  "Title": "Radar Cursor Follow (RCF)",
+  "Description": "Changes radar screen cursor behaviour. When radar FOV is not at full width, makes boundaries of scan area follow the cursor, keeping it in the center.",
+  "PreviewImageUrl": "https://vtolvr-mods.com/static/img/Logo.png",
+  "Tags": [],
+  "PublishFieldId": 0,
+  "MetaData": {
+    "DllName": "RCF.dll",
+    "AllowLoadOnStart": true,
+    "ShowOnMainList": true,
+    "DllHash": ""
+  }
+}
