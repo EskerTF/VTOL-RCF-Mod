@@ -5,6 +5,7 @@
     <OutputType>Library</OutputType>
     <LangVersion>default</LangVersion>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <VTOLVRPath Condition="'$(VTOLVRPath)' == ''">C:\Program Files (x86)\Steam\steamapps\common\VTOL
       VR</VTOLVRPath>
     <UserSecretsId>e61c5f65-ae31-4b61-8b1a-abc04e05ce25</UserSecretsId>
@@ -101,6 +102,8 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="Exists('$(VTOLVRPath)')">
     <Exec
-      Command="xcopy &quot;$(ProjectDir)item.json&quot; &quot;$(VTOLVRPath)\@Mod Loader\Mods\RCF\&quot; /i /y&#xA;xcopy &quot;$(TargetPath)&quot; &quot;$(VTOLVRPath)\@Mod Loader\Mods\RCF\&quot; /i /y&#xA;xcopy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(VTOLVRPath)\@Mod Loader\Mods\RCF\&quot; /i /y" />
+      Command="xcopy &quot;$(ProjectDir)item.json&quot; &quot;$(VTOLVRPath)\@Mod Loader\Mods\RCF\&quot; /i /y&#xA;
+      xcopy &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(VTOLVRPath)\@Mod Loader\Mods\RCF\&quot; /i /y&#xA;
+      xcopy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(VTOLVRPath)\@Mod Loader\Mods\RCF\&quot; /i /y" />
   </Target>
 </Project>
